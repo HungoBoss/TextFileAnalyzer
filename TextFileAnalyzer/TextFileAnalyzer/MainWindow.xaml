@@ -5,5 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TextFileAnalyzer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Text File Analyzer" Height="450" Width="800"
+        d:DataContext="{d:DesignInstance local:MainViewViewModel}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Choose folder -->
+        <Button Grid.Row="0"
+                Grid.Column="0"
+                Width="200"
+                Height="30"
+                Content="Choose folder"
+                Command="{Binding setSourceDirectory}"/>
+
+        <!-- Folder destination -->
+        <TextBlock Grid.Row="0"
+                   Grid.Column="1"
+                   VerticalAlignment="Center"
+                   Text="{Binding PathToSourceDirectory}"/>
+    </Grid>
 </Window>

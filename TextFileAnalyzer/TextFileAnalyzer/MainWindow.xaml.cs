@@ -23,6 +23,7 @@ namespace TextFileAnalyzer
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new MainViewViewModel();
         }
     }
 }
