@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace TextFileAnalyzer
 {
-    class TextFileModel
+    public class TextFileModel
     {
-        public string Name { get; set; }
+        public string Name { get; }
         public int NumberOfWords { get; set; }
         public int NumberOfSentences { get; set; }
         public string LongestWord { get; set; }

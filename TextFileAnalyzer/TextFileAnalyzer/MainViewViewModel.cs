@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -14,7 +15,8 @@ namespace TextFileAnalyzer
     public class MainViewViewModel : INotifyPropertyChanged
     {
         private string _pathToSourceDirectory;
-        public SelectSourceDirectory setSourceDirectory => new SelectSourceDirectory(this);
+        private ObservableCollection<TextFileModel> _textFiles = new ObservableCollection<TextFileModel>();
+        public SelectSourceDirectory SelectSourceDirectory => new SelectSourceDirectory(this);
 
         public string PathToSourceDirectory
         {
@@ -24,6 +26,24 @@ namespace TextFileAnalyzer
                 _pathToSourceDirectory = value;
                 OnPropertyChanged(nameof(PathToSourceDirectory));
             }
+        }
+
+        public ObservableCollection<TextFileModel> TextFiles
+        {
+            get => _textFiles;
+            set
+            {
+                _textFiles = value;
+                OnPropertyChanged(nameof(TextFiles));
+            }
+        }
+
+        public void AddTextFile()
+        {
+            TextFiles.Add(new TextFileModel("A"));
+            TextFiles.Add(new TextFileModel("B"));
+            TextFiles.Add(new TextFileModel("C"));
+            TextFiles.Add(new TextFileModel("D"));
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -54,6 +74,7 @@ namespace TextFileAnalyzer
             var dialog = new FolderBrowserDialog();
             dialog.ShowDialog();
             _viewModel.PathToSourceDirectory = dialog.SelectedPath;
+            _viewModel.AddTextFile();
         }
 
         public event EventHandler CanExecuteChanged;
