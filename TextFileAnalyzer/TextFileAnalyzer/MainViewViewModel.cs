@@ -50,7 +50,16 @@ namespace TextFileAnalyzer
 
                 if (filename.Split('.').Last() == "txt")
                 {
-                    TextFiles.Add(new TextFileModel(filename));
+                    var textFile = new TextFileModel(filename);
+
+                    using (var reader = new StreamReader(file))
+                    {
+                        textFile.Text = reader.ReadToEnd();
+                    }
+
+                    textFile.GetNumberOfWords();
+                    textFile.GetNumberOfSentences();
+                    TextFiles.Add(textFile);
                 }
             }
         }
