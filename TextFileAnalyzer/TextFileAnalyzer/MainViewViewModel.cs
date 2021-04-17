@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -38,12 +39,15 @@ namespace TextFileAnalyzer
             }
         }
 
-        public void AddTextFile()
+        public void LoadTextFiles()
         {
-            TextFiles.Add(new TextFileModel("A"));
-            TextFiles.Add(new TextFileModel("B"));
-            TextFiles.Add(new TextFileModel("C"));
-            TextFiles.Add(new TextFileModel("D"));
+            var path = PathToSourceDirectory;
+            var fileNames = Directory.GetFiles(path);
+
+            foreach (var fileName in fileNames)
+            {
+                TextFiles.Add(new TextFileModel(fileName));
+            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -74,7 +78,7 @@ namespace TextFileAnalyzer
             var dialog = new FolderBrowserDialog();
             dialog.ShowDialog();
             _viewModel.PathToSourceDirectory = dialog.SelectedPath;
-            _viewModel.AddTextFile();
+            _viewModel.LoadTextFiles();
         }
 
         public event EventHandler CanExecuteChanged;
