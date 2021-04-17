@@ -1,5 +1,5 @@
 Toto je retezec predstavovany nekolika radky,
-ktere jsou od sebe oddeleny LF (Line Feed)
+ktere jsou od sebe oddeleny LF (Line Feed).
 Je tu i nejaky ten vykricnik! Pro ucely testovani i otaznik?
 Toto je jen zkratka zkr. ale ne konec vety. A toto je
 posledni veta!

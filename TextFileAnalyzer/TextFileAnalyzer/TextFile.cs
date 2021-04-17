@@ -33,9 +33,9 @@ namespace TextFileAnalyzer
 
         public void GetNumberOfSentences()
         {
-            const string firstPattern = @"[.!?]\s[A-Z]";    // Matches for sentences followed by next sentence (uppercase char)
+            const string firstPattern = @"[.!?]\s*[A-Z]";    // Matches for sentences followed by next sentence (uppercase char)
             const string secondPattern = @"[.!?]\z";        // Matches for sentences followed by end of string
-            
+
             var numberOfFirstMatches = Regex.Matches(Text, firstPattern).Count;
             var numberOfSecondMatches = Regex.Matches(Text, secondPattern).Count;
 
