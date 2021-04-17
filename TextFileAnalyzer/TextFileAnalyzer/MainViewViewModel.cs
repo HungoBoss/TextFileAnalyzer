@@ -44,9 +44,14 @@ namespace TextFileAnalyzer
             var path = PathToSourceDirectory;
             var fileNames = Directory.GetFiles(path);
 
-            foreach (var fileName in fileNames)
+            foreach (var file in fileNames)
             {
-                TextFiles.Add(new TextFileModel(fileName));
+                var filename = file.Split('\\').Last();
+
+                if (filename.Split('.').Last() == "txt")
+                {
+                    TextFiles.Add(new TextFileModel(filename));
+                }
             }
         }
 
