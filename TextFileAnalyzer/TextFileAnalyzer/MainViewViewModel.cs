@@ -16,7 +16,7 @@ namespace TextFileAnalyzer
     {
         private string _pathToSourceDirectory;
         private ObservableCollection<TextFileModel> _textFiles = new ObservableCollection<TextFileModel>();
-        public SelectSourceDirectory SelectSourceDirectory => new SelectSourceDirectory(this);
+        public SelectSourceDirectoryCommand SelectSourceDirectory => new SelectSourceDirectoryCommand(this);
 
         public string PathToSourceDirectory
         {
@@ -55,11 +55,11 @@ namespace TextFileAnalyzer
         }
     }
 
-    public class SelectSourceDirectory : ICommand
+    public class SelectSourceDirectoryCommand : ICommand
     {
         private readonly MainViewViewModel _viewModel;
 
-        public SelectSourceDirectory(MainViewViewModel viewModel)
+        public SelectSourceDirectoryCommand(MainViewViewModel viewModel)
         {
             _viewModel = viewModel;
         }
