@@ -15,6 +15,7 @@ namespace TextFileAnalyzer
         public string LongestSentence { get; set; }
         public string ShortestWord { get; set; }
         public string ShortestSentence { get; set; }
+        public string MostOccurredWord { get; set; }
 
         public TextFileModel(string name)
         {

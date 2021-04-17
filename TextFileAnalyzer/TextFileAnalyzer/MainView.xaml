@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:TextFileAnalyzer"
         mc:Ignorable="d"
         Title="Text File Analyzer" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen"
         d:DataContext="{d:DesignInstance local:MainViewViewModel}">
     <Grid>
         <Grid.RowDefinitions>
@@ -89,6 +90,56 @@
                                        Grid.Column="3"
                                        Style="{StaticResource TextFileTextBlocks}"
                                        Text="{Binding NumberOfSentences}"/>
+
+                            <!-- Most occurred word -->
+                            <Label Grid.Row="0"
+                                   Grid.Column="4"
+                                   Style="{StaticResource TextFileLabels}"
+                                   Content="Most occurred word:"/>
+                            <TextBlock Grid.Row="1"
+                                       Grid.Column="4"
+                                       Style="{StaticResource TextFileTextBlocks}"
+                                       Text="{Binding MostOccurredWord}"/>
+
+                            <!-- Longest word -->
+                            <Label Grid.Row="0"
+                                   Grid.Column="5"
+                                   Style="{StaticResource TextFileLabels}"
+                                   Content="Longest word"/>
+                            <TextBlock Grid.Row="1"
+                                       Grid.Column="5"
+                                       Style="{StaticResource TextFileTextBlocks}"
+                                       Text="{Binding LongestWord}"/>
+
+                            <!-- Shortest word -->
+                            <Label Grid.Row="0"
+                                   Grid.Column="6"
+                                   Style="{StaticResource TextFileLabels}"
+                                   Content="Shortest word"/>
+                            <TextBlock Grid.Row="1"
+                                       Grid.Column="6"
+                                       Style="{StaticResource TextFileTextBlocks}"
+                                       Text="{Binding ShortestWord}"/>
+
+                            <!-- Longest sentence -->
+                            <Label Grid.Row="0"
+                                   Grid.Column="7"
+                                   Style="{StaticResource TextFileLabels}"
+                                   Content="Longest sentence"/>
+                            <TextBlock Grid.Row="1"
+                                       Grid.Column="7"
+                                       Style="{StaticResource TextFileTextBlocks}"
+                                       Text="{Binding LongestSentence}"/>
+
+                            <!-- Longest sentence -->
+                            <Label Grid.Row="0"
+                                   Grid.Column="8"
+                                   Style="{StaticResource TextFileLabels}"
+                                   Content="Shortest sentence"/>
+                            <TextBlock Grid.Row="1"
+                                       Grid.Column="8"
+                                       Style="{StaticResource TextFileTextBlocks}"
+                                       Text="{Binding ShortestSentence}"/>
 
                         </Grid>
                     </WrapPanel>
