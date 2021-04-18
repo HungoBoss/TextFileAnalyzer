@@ -184,6 +184,34 @@ namespace TextFileAnalyzer
             ShortestFile = orderedFiles.First().Name;
         }
 
+        public void FindLongestWord()
+        {
+            var orderedFiles = TextFiles.OrderBy(x => x.LongestWord.Length);
+
+            LongestWord = orderedFiles.Last().LongestWord;
+        }
+
+        public void FindShortestWord()
+        {
+            var orderedFiles = TextFiles.OrderBy(x => x.ShortestWord.Length);
+
+            ShortestWord = orderedFiles.First().ShortestWord;
+        }
+
+        public void FindLongestSentence()
+        {
+            var orderedFiles = TextFiles.OrderBy(x => x.LongestSentence.Length);
+
+            LongestSentence = orderedFiles.Last().LongestSentence;
+        }
+
+        public void FindShortestSentence()
+        {
+            var orderedFiles = TextFiles.OrderBy(x => x.ShortestSentence.Length);
+
+            ShortestSentence = orderedFiles.First().ShortestSentence;
+        }
+
         public void LoadTextFiles()
         {
             var path = PathToSourceDirectory;
@@ -247,6 +275,10 @@ namespace TextFileAnalyzer
             _viewModel.LoadTextFiles();
             _viewModel.FindMostOccurredWordInFolder();
             _viewModel.FindLongestAndShortestFile();
+            _viewModel.FindLongestWord();
+            _viewModel.FindShortestWord();
+            _viewModel.FindLongestSentence();
+            _viewModel.FindShortestSentence();
         }
 
         public event EventHandler CanExecuteChanged;
