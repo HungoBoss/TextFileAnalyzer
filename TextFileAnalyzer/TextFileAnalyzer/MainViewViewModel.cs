@@ -17,7 +17,7 @@ namespace TextFileAnalyzer
     {
         private string _pathToSourceDirectory;
 
-        private ObservableCollection<TextFileModel> _textFiles = new ObservableCollection<TextFileModel>();
+        private ObservableCollection<TextFile> _textFiles = new ObservableCollection<TextFile>();
         public SelectSourceDirectoryCommand SelectSourceDirectory => new SelectSourceDirectoryCommand(this);
 
         public string PathToSourceDirectory
@@ -30,7 +30,7 @@ namespace TextFileAnalyzer
             }
         }
 
-        public ObservableCollection<TextFileModel> TextFiles
+        public ObservableCollection<TextFile> TextFiles
         {
             get => _textFiles;
             set
@@ -51,7 +51,7 @@ namespace TextFileAnalyzer
 
                 if (filename.Split('.').Last() == "txt")
                 {
-                    var textFile = new TextFileModel(filename);
+                    var textFile = new TextFile(filename);
 
                     using (var reader = new StreamReader(file))
                     {

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace TextFileAnalyzer
 {
-    public class TextFileModel
+    public class TextFile
     {
         public string Name { get; }
         public string Text { get; set; }
@@ -20,7 +20,7 @@ namespace TextFileAnalyzer
         public string ShortestSentence { get; set; }
         public string MostOccurredWord { get; set; }
 
-        public TextFileModel(string name)
+        public TextFile(string name)
         {
             Name = name;
         }
