@@ -16,6 +16,7 @@ namespace TextFileAnalyzer
     public class MainViewViewModel : INotifyPropertyChanged
     {
         private string _pathToSourceDirectory;
+
         private ObservableCollection<TextFileModel> _textFiles = new ObservableCollection<TextFileModel>();
         public SelectSourceDirectoryCommand SelectSourceDirectory => new SelectSourceDirectoryCommand(this);
 

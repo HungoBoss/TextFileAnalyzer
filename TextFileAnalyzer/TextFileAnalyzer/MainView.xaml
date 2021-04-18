@@ -11,6 +11,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
@@ -33,8 +34,35 @@
                    VerticalAlignment="Center"
                    Text="{Binding PathToSourceDirectory}"/>
 
+        <!-- Folder statistics -->
+        <Grid Grid.Row="1"
+              Grid.Column="0"
+              Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0"
+                   Grid.Column="0"
+                   FontSize="18"
+                   HorizontalContentAlignment="Center"
+                   Content="Number of files: "/>
+            <TextBlock Grid.Row="1" 
+                       Grid.Column="0"
+                       FontSize="20"
+                       TextAlignment="Center"
+                       Text="{Binding TextFiles.Count}"/>
+        </Grid>
+
         <!-- List of all text files -->
-        <ListView Grid.Row="1"
+        <ListView Grid.Row="2"
                  Grid.Column="0"
                  Grid.ColumnSpan="2"
                  BorderThickness="0"
@@ -124,24 +152,24 @@
                                 <!-- Longest sentence -->
                                 <Label Grid.Row="0"
                                        Grid.Column="7"
-                                       Width="100"
+                                       Width="150"
                                        Style="{StaticResource TextFileLabels}"
                                        Content="Longest sentence"/>
                                 <TextBlock Grid.Row="1"
                                            Grid.Column="7"
-                                           Width="100"
+                                           Width="150"
                                            Style="{StaticResource TextFileTextBlocks}"
                                            Text="{Binding LongestSentence}"/>
 
                                 <!-- Longest sentence -->
                                 <Label Grid.Row="0"
                                        Grid.Column="8"
-                                       Width="100"
+                                       Width="150"
                                        Style="{StaticResource TextFileLabels}"
                                        Content="Shortest sentence"/>
                                 <TextBlock Grid.Row="1"
                                            Grid.Column="8"
-                                           Width="100"
+                                           Width="150"
                                            Style="{StaticResource TextFileTextBlocks}"
                                            Text="{Binding ShortestSentence}"/>
 
