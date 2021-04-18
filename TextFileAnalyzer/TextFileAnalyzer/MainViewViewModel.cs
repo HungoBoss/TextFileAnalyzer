@@ -59,6 +59,9 @@ namespace TextFileAnalyzer
 
                     textFile.GetNumberOfWords();
                     textFile.GetNumberOfSentences();
+                    textFile.GetMostOccurredWord();
+                    textFile.GetLongestAndShortestWord();
+                    textFile.GetLongestAndShortestSentence();
                     TextFiles.Add(textFile);
                 }
             }

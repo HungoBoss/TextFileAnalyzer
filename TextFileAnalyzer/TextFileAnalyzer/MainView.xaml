@@ -124,20 +124,24 @@
                             <!-- Longest sentence -->
                             <Label Grid.Row="0"
                                    Grid.Column="7"
+                                   Width="150"
                                    Style="{StaticResource TextFileLabels}"
                                    Content="Longest sentence"/>
                             <TextBlock Grid.Row="1"
                                        Grid.Column="7"
+                                       Width="150"
                                        Style="{StaticResource TextFileTextBlocks}"
                                        Text="{Binding LongestSentence}"/>
 
                             <!-- Longest sentence -->
                             <Label Grid.Row="0"
                                    Grid.Column="8"
+                                   Width="150"
                                    Style="{StaticResource TextFileLabels}"
                                    Content="Shortest sentence"/>
                             <TextBlock Grid.Row="1"
                                        Grid.Column="8"
+                                       Width="150"
                                        Style="{StaticResource TextFileTextBlocks}"
                                        Text="{Binding ShortestSentence}"/>
 

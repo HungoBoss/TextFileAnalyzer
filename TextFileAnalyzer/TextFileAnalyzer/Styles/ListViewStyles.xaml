@@ -5,11 +5,14 @@
     <Style TargetType="Label" x:Key="TextFileLabels">
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
     </Style>
 
     <!-- Default style for text blocks -->
     <Style TargetType="TextBlock" x:Key="TextFileTextBlocks">
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="TextWrapping" Value="WrapWithOverflow"/>
     </Style>
 </ResourceDictionary>
