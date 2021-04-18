@@ -11,7 +11,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
-            <RowDefinition Height="60"/>
+            <RowDefinition Height="140"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
@@ -39,6 +39,8 @@
               Grid.Column="0"
               Grid.ColumnSpan="2">
             <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
@@ -89,6 +91,66 @@
                        Grid.Column="3"
                        Style="{StaticResource FolderOverviewTextBlocks}"
                        Text="{Binding MostOccurredWord}"/>
+
+            <!-- Longest Word in folder -->
+            <Label Grid.Row="2"
+                   Grid.Column="0"
+                   Style="{StaticResource FolderOverviewSmallerLabel}"
+                   Content="Longest Word: "/>
+            <TextBlock Grid.Row="3"
+                       Grid.Column="0"
+                       Style="{StaticResource FolderOverviewTextBlocks}"
+                       Text="{Binding LongestWord}"/>
+
+            <!-- Shortest Word in folder -->
+            <Label Grid.Row="2"
+                   Grid.Column="1"
+                   Style="{StaticResource FolderOverviewSmallerLabel}"
+                   Content="Shortest Word: "/>
+            <TextBlock Grid.Row="3"
+                       Grid.Column="1"
+                       Style="{StaticResource FolderOverviewTextBlocks}"
+                       Text="{Binding ShortestWord}"/>
+
+            <!-- Longest Sentence in folder -->
+            <Label Grid.Row="2"
+                   Grid.Column="2"
+                   Style="{StaticResource FolderOverviewSmallerLabel}"
+                   Content="Longest Sentence: "/>
+            <TextBlock Grid.Row="3"
+                       Grid.Column="2"
+                       Style="{StaticResource FolderOverviewTextBlocks}"
+                       Text="{Binding LongestSentence}"/>
+
+            <!-- Shortest Sentence in folder -->
+            <Label Grid.Row="2"
+                   Grid.Column="3"
+                   Style="{StaticResource FolderOverviewSmallerLabel}"
+                   Content="Shortest Sentence: "/>
+            <TextBlock Grid.Row="3"
+                       Grid.Column="3"
+                       Style="{StaticResource FolderOverviewTextBlocks}"
+                       Text="{Binding ShortestSentence}"/>
+
+            <!-- Longest File in folder -->
+            <Label Grid.Row="0"
+                   Grid.Column="4"
+                   Style="{StaticResource FolderOverviewSmallerLabel}"
+                   Content="Longest File: "/>
+            <TextBlock Grid.Row="1"
+                       Grid.Column="4"
+                       Style="{StaticResource FolderOverviewTextBlocks}"
+                       Text="{Binding LongestFileName}"/>
+
+            <!-- Shortest File in folder -->
+            <Label Grid.Row="2"
+                   Grid.Column="4"
+                   Style="{StaticResource FolderOverviewSmallerLabel}"
+                   Content="Shortest File: "/>
+            <TextBlock Grid.Row="3"
+                       Grid.Column="4"
+                       Style="{StaticResource FolderOverviewTextBlocks}"
+                       Text="{Binding ShortestFileName}"/>
         </Grid>
 
         <!-- List of all text files -->

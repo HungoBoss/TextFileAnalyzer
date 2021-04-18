@@ -15,16 +15,23 @@ namespace TextFileAnalyzer
 {
     public class MainViewViewModel : INotifyPropertyChanged
     {
+        #region Properties
         private string _pathToSourceDirectory;
-        private string _longestFileName;
-        private string _shortestFileName;
+        private string _longestFile;
+        private string _shortestFile;
         private string _mostOccurredWord;
+        private string _longestWord;
+        private string _shortestWord;
+        private string _longestSentence;
+        private string _shortestSentence;
         private int _numberOfWords;
         private int _numberOfSentences;
         private ObservableCollection<TextFile> _textFiles = new ObservableCollection<TextFile>();
+        #endregion
 
         public SelectSourceDirectoryCommand SelectSourceDirectory => new SelectSourceDirectoryCommand(this);
 
+        #region Setters and Getters
         public string PathToSourceDirectory
         {
             get => _pathToSourceDirectory;
@@ -67,20 +74,20 @@ namespace TextFileAnalyzer
 
         public string LongestFileName
         {
-            get => _longestFileName;
+            get => _longestFile;
             set
             {
-                _longestFileName = value;
+                _longestFile = value;
                 OnPropertyChanged(nameof(LongestFileName));
             }
         }
 
         public string ShortestFileName
         {
-            get => _shortestFileName;
+            get => _shortestFile;
             set
             {
-                _shortestFileName = value;
+                _shortestFile = value;
                 OnPropertyChanged(nameof(ShortestFileName));
             }
         }
@@ -94,6 +101,47 @@ namespace TextFileAnalyzer
                 OnPropertyChanged(nameof(MostOccurredWord));
             }
         }
+
+        public string LongestWord
+        {
+            get => _longestWord;
+            set
+            {
+                _longestWord = value;
+                OnPropertyChanged(nameof(LongestWord));
+            }
+        }
+
+        public string ShortestWord
+        {
+            get => _shortestWord;
+            set
+            {
+                _shortestWord = value;
+                OnPropertyChanged(nameof(ShortestWord));
+            }
+        }
+
+        public string LongestSentence
+        {
+            get => _longestSentence;
+            set
+            {
+                _longestSentence = value;
+                OnPropertyChanged(nameof(LongestSentence));
+            }
+        }
+
+        public string ShortestSentence
+        {
+            get => _shortestSentence;
+            set
+            {
+                _shortestSentence = value;
+                OnPropertyChanged(nameof(ShortestSentence));
+            }
+        }
+        #endregion
 
         public void FindMostOccurredWordInFolder()
         {
