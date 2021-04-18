@@ -15,4 +15,11 @@
         <Setter Property="TextAlignment" Value="Center"/>
         <Setter Property="TextWrapping" Value="WrapWithOverflow"/>
     </Style>
+
+    <!-- Default style for List View items -->
+    <Style TargetType="ListViewItem" x:Key="ListViewItems">
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="IsHitTestVisible" Value="False"/>
+        <Setter Property="Focusable" Value="False"/>
+    </Style>
 </ResourceDictionary>

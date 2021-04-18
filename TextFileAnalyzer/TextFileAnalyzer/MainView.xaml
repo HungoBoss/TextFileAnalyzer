@@ -35,118 +35,118 @@
 
         <!-- List of all text files -->
         <ListView Grid.Row="1"
-                  Grid.Column="0"
-                  Grid.ColumnSpan="2"
-                  BorderThickness="0"
-                  ItemsSource="{Binding TextFiles}">
+                 Grid.Column="0"
+                 Grid.ColumnSpan="2"
+                 BorderThickness="0"
+                 ItemsSource="{Binding TextFiles}">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <WrapPanel>
-                        <Grid Margin="0 10">
-                            <Grid.RowDefinitions>
-                                <RowDefinition/>
-                                <RowDefinition/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
+                    <ListViewItem Style="{StaticResource ListViewItems}">
+                            <Grid Margin="0 10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
 
-                            <!-- File name -->
-                            <Label Grid.Row="0"
-                                   Grid.Column="0"
-                                   Grid.RowSpan="2"
-                                   Style="{StaticResource TextFileLabels}"
-                                   Content="File: "/>
-                            <TextBlock Grid.Row="0"
-                                       Grid.Column="1"
-                                       Style="{StaticResource TextFileTextBlocks}"
+                                <!-- File name -->
+                                <Label Grid.Row="0"
+                                       Grid.Column="0"
                                        Grid.RowSpan="2"
-                                       Text="{Binding Name}"/>
+                                       Style="{StaticResource TextFileLabels}"
+                                       Content="File: "/>
+                                <TextBlock Grid.Row="0"
+                                           Grid.Column="1"
+                                           Style="{StaticResource TextFileTextBlocks}"
+                                           Grid.RowSpan="2"
+                                           Text="{Binding Name}"/>
 
-                            <!-- Number of words -->
-                            <Label Grid.Row="0"
-                                   Grid.Column="2"
-                                   Style="{StaticResource TextFileLabels}"
-                                   Content="Words: "/>
-                            <TextBlock Grid.Row="1"
+                                <!-- Number of words -->
+                                <Label Grid.Row="0"
                                        Grid.Column="2"
-                                       Style="{StaticResource TextFileTextBlocks}"
-                                       Text="{Binding NumberOfWords}"/>
+                                       Style="{StaticResource TextFileLabels}"
+                                       Content="Words: "/>
+                                <TextBlock Grid.Row="1"
+                                           Grid.Column="2"
+                                           Style="{StaticResource TextFileTextBlocks}"
+                                           Text="{Binding NumberOfWords}"/>
 
-                            <!-- Number of sentences -->
-                            <Label Grid.Row="0"
-                                   Grid.Column="3"
-                                   Style="{StaticResource TextFileLabels}"
-                                   Content="Sentences: "/>
-                            <TextBlock Grid.Row="1"
+                                <!-- Number of sentences -->
+                                <Label Grid.Row="0"
                                        Grid.Column="3"
-                                       Style="{StaticResource TextFileTextBlocks}"
-                                       Text="{Binding NumberOfSentences}"/>
+                                       Style="{StaticResource TextFileLabels}"
+                                       Content="Sentences: "/>
+                                <TextBlock Grid.Row="1"
+                                           Grid.Column="3"
+                                           Style="{StaticResource TextFileTextBlocks}"
+                                           Text="{Binding NumberOfSentences}"/>
 
-                            <!-- Most occurred word -->
-                            <Label Grid.Row="0"
-                                   Grid.Column="4"
-                                   Style="{StaticResource TextFileLabels}"
-                                   Content="Most occurred word:"/>
-                            <TextBlock Grid.Row="1"
+                                <!-- Most occurred word -->
+                                <Label Grid.Row="0"
                                        Grid.Column="4"
-                                       Style="{StaticResource TextFileTextBlocks}"
-                                       Text="{Binding MostOccurredWord}"/>
+                                       Style="{StaticResource TextFileLabels}"
+                                       Content="Most occurred word:"/>
+                                <TextBlock Grid.Row="1"
+                                           Grid.Column="4"
+                                           Style="{StaticResource TextFileTextBlocks}"
+                                           Text="{Binding MostOccurredWord}"/>
 
-                            <!-- Longest word -->
-                            <Label Grid.Row="0"
-                                   Grid.Column="5"
-                                   Style="{StaticResource TextFileLabels}"
-                                   Content="Longest word"/>
-                            <TextBlock Grid.Row="1"
+                                <!-- Longest word -->
+                                <Label Grid.Row="0"
                                        Grid.Column="5"
-                                       Style="{StaticResource TextFileTextBlocks}"
-                                       Text="{Binding LongestWord}"/>
+                                       Style="{StaticResource TextFileLabels}"
+                                       Content="Longest word"/>
+                                <TextBlock Grid.Row="1"
+                                           Grid.Column="5"
+                                           Style="{StaticResource TextFileTextBlocks}"
+                                           Text="{Binding LongestWord}"/>
 
-                            <!-- Shortest word -->
-                            <Label Grid.Row="0"
-                                   Grid.Column="6"
-                                   Style="{StaticResource TextFileLabels}"
-                                   Content="Shortest word"/>
-                            <TextBlock Grid.Row="1"
+                                <!-- Shortest word -->
+                                <Label Grid.Row="0"
                                        Grid.Column="6"
-                                       Style="{StaticResource TextFileTextBlocks}"
-                                       Text="{Binding ShortestWord}"/>
+                                       Style="{StaticResource TextFileLabels}"
+                                       Content="Shortest word"/>
+                                <TextBlock Grid.Row="1"
+                                           Grid.Column="6"
+                                           Style="{StaticResource TextFileTextBlocks}"
+                                           Text="{Binding ShortestWord}"/>
 
-                            <!-- Longest sentence -->
-                            <Label Grid.Row="0"
-                                   Grid.Column="7"
-                                   Width="150"
-                                   Style="{StaticResource TextFileLabels}"
-                                   Content="Longest sentence"/>
-                            <TextBlock Grid.Row="1"
+                                <!-- Longest sentence -->
+                                <Label Grid.Row="0"
                                        Grid.Column="7"
-                                       Width="150"
-                                       Style="{StaticResource TextFileTextBlocks}"
-                                       Text="{Binding LongestSentence}"/>
+                                       Width="100"
+                                       Style="{StaticResource TextFileLabels}"
+                                       Content="Longest sentence"/>
+                                <TextBlock Grid.Row="1"
+                                           Grid.Column="7"
+                                           Width="100"
+                                           Style="{StaticResource TextFileTextBlocks}"
+                                           Text="{Binding LongestSentence}"/>
 
-                            <!-- Longest sentence -->
-                            <Label Grid.Row="0"
-                                   Grid.Column="8"
-                                   Width="150"
-                                   Style="{StaticResource TextFileLabels}"
-                                   Content="Shortest sentence"/>
-                            <TextBlock Grid.Row="1"
+                                <!-- Longest sentence -->
+                                <Label Grid.Row="0"
                                        Grid.Column="8"
-                                       Width="150"
-                                       Style="{StaticResource TextFileTextBlocks}"
-                                       Text="{Binding ShortestSentence}"/>
+                                       Width="100"
+                                       Style="{StaticResource TextFileLabels}"
+                                       Content="Shortest sentence"/>
+                                <TextBlock Grid.Row="1"
+                                           Grid.Column="8"
+                                           Width="100"
+                                           Style="{StaticResource TextFileTextBlocks}"
+                                           Text="{Binding ShortestSentence}"/>
 
-                        </Grid>
-                    </WrapPanel>
+                            </Grid>
+                    </ListViewItem>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
