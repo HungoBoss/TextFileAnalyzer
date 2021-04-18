@@ -3,11 +3,17 @@
                     xmlns:local="clr-namespace:TextFileAnalyzer">
     <Style TargetType="Label" x:Key="FolderOverviewLabels">
         <Setter Property="FontSize" Value="18"/>
+        <Setter Property="VerticalContentAlignment" Value="Bottom"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
     </Style>
 
     <Style TargetType="TextBlock" x:Key="FolderOverviewTextBlocks">
         <Setter Property="FontSize" Value="20"/>
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
         <Setter Property="TextAlignment" Value="Center"/>
+    </Style>
+
+    <Style TargetType="Label" x:Key="FolderOverviewSmallerLabel" BasedOn="{StaticResource FolderOverviewLabels}">
+        <Setter Property="FontSize" Value="14"/>
     </Style>
 </ResourceDictionary>

@@ -42,7 +42,7 @@ namespace TextFileAnalyzer
             NumberOfSentences = numberOfFirstMatches + numberOfSecondMatches;
         }
 
-        private static string RemoveSpecificCharacters(string originalText)
+        public static string RemoveSpecificCharacters(string originalText)
         {
             return Regex.Replace(originalText, @"[.!?,()]", string.Empty);
         }

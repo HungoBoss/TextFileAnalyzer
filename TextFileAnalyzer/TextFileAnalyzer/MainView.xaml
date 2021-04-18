@@ -69,6 +69,26 @@
                        Grid.Column="1"
                        Style="{StaticResource FolderOverviewTextBlocks}"
                        Text="{Binding NumberOfWords}"/>
+
+            <!-- Total number of sentences -->
+            <Label Grid.Row="0"
+                   Grid.Column="2"
+                   Style="{StaticResource FolderOverviewLabels}"
+                   Content="Total sentences: "/>
+            <TextBlock Grid.Row="1"
+                       Grid.Column="2"
+                       Style="{StaticResource FolderOverviewTextBlocks}"
+                       Text="{Binding NumberOfSentences}"/>
+
+            <!-- Most occurred word in folder -->
+            <Label Grid.Row="0"
+                   Grid.Column="3"
+                   Style="{StaticResource FolderOverviewSmallerLabel}"
+                   Content="Most occurred word: "/>
+            <TextBlock Grid.Row="1"
+                       Grid.Column="3"
+                       Style="{StaticResource FolderOverviewTextBlocks}"
+                       Text="{Binding MostOccurredWord}"/>
         </Grid>
 
         <!-- List of all text files -->

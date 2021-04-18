@@ -18,6 +18,7 @@ namespace TextFileAnalyzer
         private string _pathToSourceDirectory;
         private string _longestFileName;
         private string _shortestFileName;
+        private string _mostOccurredWord;
         private int _numberOfWords;
         private int _numberOfSentences;
         private ObservableCollection<TextFile> _textFiles = new ObservableCollection<TextFile>();
@@ -84,6 +85,47 @@ namespace TextFileAnalyzer
             }
         }
 
+        public string MostOccurredWord
+        {
+            get => _mostOccurredWord;
+            set
+            {
+                _mostOccurredWord = value;
+                OnPropertyChanged(nameof(MostOccurredWord));
+            }
+        }
+
+        public void FindMostOccurredWordInFolder()
+        {
+            var wordCount = new Dictionary<string, int>();
+
+            foreach (var file in TextFiles)
+            {
+                var fileContent = TextFile.RemoveSpecificCharacters(file.Text);
+                var words = fileContent.Split(' ');
+
+                foreach (var word in words)
+                {
+                    if (wordCount.ContainsKey(word))
+                    {
+                        wordCount[word] += 1;
+                    }
+                    else
+                    {
+                        wordCount.Add(word, 1);
+                    }
+                }
+            }
+
+            var orderedWords = 
+                from words 
+                in wordCount 
+                orderby words.Value descending 
+                select words;
+
+            MostOccurredWord = orderedWords.First().Key;
+        }
+
         public void LoadTextFiles()
         {
             var path = PathToSourceDirectory;
@@ -145,6 +187,7 @@ namespace TextFileAnalyzer
             dialog.ShowDialog();
             _viewModel.PathToSourceDirectory = dialog.SelectedPath;
             _viewModel.LoadTextFiles();
+            _viewModel.FindMostOccurredWordInFolder();
         }
 
         public event EventHandler CanExecuteChanged;
