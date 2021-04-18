@@ -140,7 +140,7 @@
             <TextBlock Grid.Row="1"
                        Grid.Column="4"
                        Style="{StaticResource FolderOverviewTextBlocks}"
-                       Text="{Binding LongestFileName}"/>
+                       Text="{Binding LongestFile}"/>
 
             <!-- Shortest File in folder -->
             <Label Grid.Row="2"
@@ -150,7 +150,7 @@
             <TextBlock Grid.Row="3"
                        Grid.Column="4"
                        Style="{StaticResource FolderOverviewTextBlocks}"
-                       Text="{Binding ShortestFileName}"/>
+                       Text="{Binding ShortestFile}"/>
         </Grid>
 
         <!-- List of all text files -->

@@ -29,7 +29,9 @@ namespace TextFileAnalyzer
         private ObservableCollection<TextFile> _textFiles = new ObservableCollection<TextFile>();
         #endregion
 
+        #region Commands
         public SelectSourceDirectoryCommand SelectSourceDirectory => new SelectSourceDirectoryCommand(this);
+        #endregion
 
         #region Setters and Getters
         public string PathToSourceDirectory
@@ -72,23 +74,23 @@ namespace TextFileAnalyzer
             }
         }
 
-        public string LongestFileName
+        public string LongestFile
         {
             get => _longestFile;
             set
             {
                 _longestFile = value;
-                OnPropertyChanged(nameof(LongestFileName));
+                OnPropertyChanged(nameof(LongestFile));
             }
         }
 
-        public string ShortestFileName
+        public string ShortestFile
         {
             get => _shortestFile;
             set
             {
                 _shortestFile = value;
-                OnPropertyChanged(nameof(ShortestFileName));
+                OnPropertyChanged(nameof(ShortestFile));
             }
         }
 
@@ -174,6 +176,14 @@ namespace TextFileAnalyzer
             MostOccurredWord = orderedWords.First().Key;
         }
 
+        public void FindLongestAndShortestFile()
+        {
+            var orderedFiles = TextFiles.OrderBy(x => x.NumberOfWords);
+
+            LongestFile = orderedFiles.Last().Name;
+            ShortestFile = orderedFiles.First().Name;
+        }
+
         public void LoadTextFiles()
         {
             var path = PathToSourceDirectory;
@@ -236,6 +246,7 @@ namespace TextFileAnalyzer
             _viewModel.PathToSourceDirectory = dialog.SelectedPath;
             _viewModel.LoadTextFiles();
             _viewModel.FindMostOccurredWordInFolder();
+            _viewModel.FindLongestAndShortestFile();
         }
 
         public event EventHandler CanExecuteChanged;

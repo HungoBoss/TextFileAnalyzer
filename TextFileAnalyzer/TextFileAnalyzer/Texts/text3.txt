@@ -1,2 +1,2 @@
 If you are performing only one directory-related action, it might be more efficient to use a static Directory method rather than a corresponding DirectoryInfo instance method.
-Most Directory methods require the path to the directory that you are manipulating.
+Most Directory methods require the path to the directory that you are manipulatinga.
