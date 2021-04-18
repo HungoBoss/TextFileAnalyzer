@@ -14,10 +14,22 @@
         <Setter Property="TextWrapping" Value="WrapWithOverflow"/>
     </Style>
 
+    <!-- Default style for List View -->
+    <Style TargetType="ListView" x:Key="ListView">
+    </Style>
+
     <!-- Default style for List View items -->
     <Style TargetType="ListViewItem" x:Key="ListViewItems">
         <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
         <Setter Property="IsHitTestVisible" Value="False"/>
         <Setter Property="Focusable" Value="False"/>
     </Style>
+
+    <!-- Default style images in List View Items -->
+    <Style TargetType="Image" x:Key="FolderIcon">
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="Width" Value="50"/>
+    </Style>
+
+    <!-- Name Of File -->
 </ResourceDictionary>
