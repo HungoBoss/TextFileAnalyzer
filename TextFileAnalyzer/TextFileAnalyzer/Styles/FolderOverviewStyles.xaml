@@ -1,5 +1,13 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:local="clr-namespace:TextFileAnalyzer.Styles">
-    
+                    xmlns:local="clr-namespace:TextFileAnalyzer">
+    <Style TargetType="Label" x:Key="FolderOverviewLabels">
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+    </Style>
+
+    <Style TargetType="TextBlock" x:Key="FolderOverviewTextBlocks">
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+    </Style>
 </ResourceDictionary>

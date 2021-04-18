@@ -53,25 +53,21 @@
             <!-- Total number of files -->
             <Label Grid.Row="0"
                    Grid.Column="0"
-                   FontSize="18"
-                   HorizontalContentAlignment="Center"
+                   Style="{StaticResource FolderOverviewLabels}"
                    Content="Files: "/>
             <TextBlock Grid.Row="1" 
                        Grid.Column="0"
-                       FontSize="20"
-                       TextAlignment="Center"
+                       Style="{StaticResource FolderOverviewTextBlocks}"
                        Text="{Binding TextFiles.Count}"/>
 
             <!-- Total number of words -->
             <Label Grid.Row="0"
                    Grid.Column="1"
-                   FontSize="18"
-                   HorizontalContentAlignment="Center"
+                   Style="{StaticResource FolderOverviewLabels}"
                    Content="Total words: "/>
             <TextBlock Grid.Row="1"
                        Grid.Column="1"
-                       FontSize="20"
-                       TextAlignment="Center"
+                       Style="{StaticResource FolderOverviewTextBlocks}"
                        Text="{Binding NumberOfWords}"/>
         </Grid>
 
