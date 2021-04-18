@@ -1,24 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace TextFileAnalyzer
 {
     public class TextFile
     {
+        #region Properties
         public string Name { get; }
         public string Text { get; set; }
-        public int NumberOfWords { get; set; }
-        public int NumberOfSentences { get; set; }
-        public string LongestWord { get; set; }
-        public string LongestSentence { get; set; }
-        public string ShortestWord { get; set; }
-        public string ShortestSentence { get; set; }
-        public string MostOccurredWord { get; set; }
+        public int NumberOfWords { get; private set; }
+        public int NumberOfSentences { get; private set; }
+        public string LongestWord { get; private set; }
+        public string LongestSentence { get; private set; }
+        public string ShortestWord { get; private set; }
+        public string ShortestSentence { get; private set; }
+        public string MostOccurredWord { get; private set; }
+        #endregion
 
         public TextFile(string name)
         {
@@ -73,7 +71,7 @@ namespace TextFileAnalyzer
 
         public void GetLongestAndShortestSentence()
         {
-            var modifiedText = Regex.Split(Text,@"(?<=[\.!\?])\s+").Where(s => s != string.Empty).ToArray<string>();
+            var modifiedText = Regex.Split(Text,@"(?<=[\.!\?])\s+").Where(s => s != string.Empty).ToArray();
 
             LongestSentence = modifiedText[0];
             ShortestSentence = modifiedText[modifiedText.Length - 1];
