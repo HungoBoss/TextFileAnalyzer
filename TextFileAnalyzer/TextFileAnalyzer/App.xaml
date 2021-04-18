@@ -4,6 +4,11 @@
              xmlns:local="clr-namespace:TextFileAnalyzer"
              StartupUri="MainView.xaml">
     <Application.Resources>
-        <ResourceDictionary Source="Styles/ListViewStyles.xaml"/>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/ListViewStyles.xaml"/>
+                <ResourceDictionary Source="Styles/FolderOverviewStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

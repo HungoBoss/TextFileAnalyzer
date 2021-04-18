@@ -47,18 +47,32 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
+            <!-- Total number of files -->
             <Label Grid.Row="0"
                    Grid.Column="0"
                    FontSize="18"
                    HorizontalContentAlignment="Center"
-                   Content="Number of files: "/>
+                   Content="Files: "/>
             <TextBlock Grid.Row="1" 
                        Grid.Column="0"
                        FontSize="20"
                        TextAlignment="Center"
                        Text="{Binding TextFiles.Count}"/>
+
+            <!-- Total number of words -->
+            <Label Grid.Row="0"
+                   Grid.Column="1"
+                   FontSize="18"
+                   HorizontalContentAlignment="Center"
+                   Content="Total words: "/>
+            <TextBlock Grid.Row="1"
+                       Grid.Column="1"
+                       FontSize="20"
+                       TextAlignment="Center"
+                       Text="{Binding NumberOfWords}"/>
         </Grid>
 
         <!-- List of all text files -->

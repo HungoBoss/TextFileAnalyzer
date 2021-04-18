@@ -16,8 +16,12 @@ namespace TextFileAnalyzer
     public class MainViewViewModel : INotifyPropertyChanged
     {
         private string _pathToSourceDirectory;
-
+        private string _longestFileName;
+        private string _shortestFileName;
+        private int _numberOfWords;
+        private int _numberOfSentences;
         private ObservableCollection<TextFile> _textFiles = new ObservableCollection<TextFile>();
+
         public SelectSourceDirectoryCommand SelectSourceDirectory => new SelectSourceDirectoryCommand(this);
 
         public string PathToSourceDirectory
@@ -37,6 +41,46 @@ namespace TextFileAnalyzer
             {
                 _textFiles = value;
                 OnPropertyChanged(nameof(TextFiles));
+            }
+        }
+
+        public int NumberOfWords
+        {
+            get => _numberOfWords;
+            set
+            {
+                _numberOfWords = value;
+                OnPropertyChanged(nameof(NumberOfWords));
+            }
+        }
+
+        public int NumberOfSentences
+        {
+            get => _numberOfSentences;
+            set
+            {
+                _numberOfSentences = value;
+                OnPropertyChanged(nameof(NumberOfSentences));
+            }
+        }
+
+        public string LongestFileName
+        {
+            get => _longestFileName;
+            set
+            {
+                _longestFileName = value;
+                OnPropertyChanged(nameof(LongestFileName));
+            }
+        }
+
+        public string ShortestFileName
+        {
+            get => _shortestFileName;
+            set
+            {
+                _shortestFileName = value;
+                OnPropertyChanged(nameof(ShortestFileName));
             }
         }
 
@@ -63,6 +107,10 @@ namespace TextFileAnalyzer
                     textFile.GetMostOccurredWord();
                     textFile.GetLongestAndShortestWord();
                     textFile.GetLongestAndShortestSentence();
+
+                    NumberOfWords += textFile.NumberOfWords;
+                    NumberOfSentences += textFile.NumberOfSentences;
+                    
                     TextFiles.Add(textFile);
                 }
             }
