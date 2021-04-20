@@ -162,10 +162,10 @@
 
         <!-- List of all text files -->
         <ListView Grid.Row="3"
-                 Grid.Column="0"
-                 Grid.ColumnSpan="2"
-                 BorderThickness="0"
-                 ItemsSource="{Binding TextFiles}">
+                  Grid.Column="0"
+                  Grid.ColumnSpan="2"
+                  Style="{StaticResource DefaultListView}"
+                  ItemsSource="{Binding TextFiles}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ListViewItem Style="{StaticResource ListViewItems}">
