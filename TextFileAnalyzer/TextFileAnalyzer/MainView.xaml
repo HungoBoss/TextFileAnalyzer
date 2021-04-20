@@ -190,7 +190,7 @@
                                 <Image Grid.Row="0"
                                        Grid.Column="0"
                                        Grid.RowSpan="2"
-                                       Style="{StaticResource FolderIcon}"
+                                       Style="{StaticResource FileIcon}"
                                        Source="Images/file.jpg"/>
 
                                 <TextBlock Grid.Row="0"

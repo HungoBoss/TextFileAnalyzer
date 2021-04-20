@@ -35,7 +35,7 @@
     </Style>
 
     <!-- Default style images in List View Items -->
-    <Style TargetType="Image" x:Key="FolderIcon">
+    <Style TargetType="Image" x:Key="FileIcon">
         <Setter Property="Height" Value="50"/>
         <Setter Property="Width" Value="50"/>
     </Style>
