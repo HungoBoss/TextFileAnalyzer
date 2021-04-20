@@ -14,7 +14,14 @@
     </Style>
 
     <Style x:Key="SelectButton" TargetType="Button" BasedOn="{StaticResource BaseButton}">
+        <Setter Property="Width" Value="400"/>
+        <Setter Property="Height" Value="60"/>
+        <Setter Property="Margin" Value="0 30"/>
+        <Setter Property="FontSize" Value="35"/>
+        <Setter Property="FontFamily" Value="{StaticResource OpenSans}"/>
         <Setter Property="Background" Value="#4d94cb"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Cursor" Value="Hand"/>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="Background" Value="#36768E"/>
