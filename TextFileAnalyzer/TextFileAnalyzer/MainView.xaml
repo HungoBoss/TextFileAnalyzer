@@ -9,10 +9,25 @@
         WindowStartupLocation="CenterScreen"
         d:DataContext="{d:DesignInstance local:MainViewViewModel}">
     <Grid>
+        <Grid.Resources>
+            <Style x:Key="BaseButton" TargetType="Button">
+                <Setter Property="FontFamily" Value="Century Gothic" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}" BorderThickness="1">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Grid.Resources>
+
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
-            <RowDefinition Height="60"/>
             <RowDefinition Height="140"/>
+            <RowDefinition Height="120"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
@@ -22,26 +37,38 @@
         </Grid.ColumnDefinitions>
 
         <!-- Choose folder -->
-        <Button Grid.Row="0"
+        <Button Grid.Row="2"
                 Grid.Column="0"
                 Grid.ColumnSpan="2"
-                Width="200"
-                Height="30"
-                Content="Choose folder"
-                Command="{Binding SelectSourceDirectory}"/>
+                Margin="0 30"
+                Width="400"
+                Height="60"
+                FontSize="35"
+                FontFamily="{StaticResource OpenSans}"
+                Content="Select a folder"
+                Background="#4d94cb"
+                Foreground="White"
+                Cursor="Hand"
+                Style="{StaticResource BaseButton}"
+                Command="{Binding SelectSourceDirectory}">
+        </Button>
 
         <!-- Folder destination -->
-        <TextBlock Grid.Row="1"
+        <TextBlock Grid.Row="0"
                    Grid.Column="0"
                    Grid.ColumnSpan="2"
                    TextAlignment="Center"
                    VerticalAlignment="Center"
+                   FontSize="25"
+                   FontFamily="{StaticResource OpenSans}"
+                   FontWeight="SemiBold"
                    Text="{Binding PathToSourceDirectory}"/>
 
         <!-- Folder statistics -->
-        <Grid Grid.Row="2"
+        <Grid Grid.Row="1"
               Grid.Column="0"
-              Grid.ColumnSpan="2">
+              Grid.ColumnSpan="2"
+              Background="#4d94cb">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
@@ -60,7 +87,7 @@
             <Label Grid.Row="0"
                    Grid.Column="0"
                    Style="{StaticResource FolderOverviewLabels}"
-                   Content="Files: "/>
+                   Content="Files "/>
             <TextBlock Grid.Row="1" 
                        Grid.Column="0"
                        Style="{StaticResource FolderOverviewTextBlocks}"

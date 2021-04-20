@@ -4,6 +4,8 @@
         <Setter Property="FontSize" Value="18"/>
         <Setter Property="VerticalContentAlignment" Value="Bottom"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
         <Setter Property="FontFamily" Value="{StaticResource OpenSans}"/>
     </Style>
 
@@ -11,6 +13,7 @@
         <Setter Property="FontSize" Value="20"/>
         <Setter Property="VerticalAlignment" Value="Bottom"/>
         <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="White"/>
         <Setter Property="FontFamily" Value="{StaticResource Roboto}"/>
     </Style>
 
