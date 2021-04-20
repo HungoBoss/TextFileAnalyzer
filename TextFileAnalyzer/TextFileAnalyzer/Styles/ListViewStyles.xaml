@@ -44,4 +44,12 @@
     <Style TargetType="TextBlock" x:Key="TextBlockBiggerText" BasedOn="{StaticResource TextFileTextBlocks}">
         <Setter Property="FontSize" Value="18"/>
     </Style>
+
+    <Style TargetType="TextBlock" x:Key="TextBlockWithRestrictedWidth" BasedOn="{StaticResource TextFileTextBlocks}">
+        <Setter Property="Width" Value="180"/>
+    </Style>
+
+    <Style TargetType="Label" x:Key="LabelsWithRestrictedWidth" BasedOn="{StaticResource TextFileLabels}">
+        <Setter Property="Width" Value="180"/>
+    </Style>
 </ResourceDictionary>
