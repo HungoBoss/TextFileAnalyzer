@@ -25,12 +25,7 @@
         <Button Grid.Row="2"
                 Grid.Column="0"
                 Grid.ColumnSpan="2"
-                Margin="0 30"
-                FontSize="35"
-                FontFamily="{StaticResource OpenSans}"
                 Content="Select a folder"
-                Foreground="White"
-                Cursor="Hand"
                 Style="{StaticResource SelectButton}"
                 Command="{Binding SelectSourceDirectory}">
         </Button>
@@ -40,18 +35,9 @@
                    Grid.Column="0"
                    Grid.ColumnSpan="2">
             <Image Source="Images/folder.png"
-                   Margin="10"
-                   Width="50"
-                   Height="50"/>
-            <TextBlock TextAlignment="Center"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Bottom"
-                       Margin="0 10"
-                       FontSize="25"
-                       FontFamily="{StaticResource OpenSans}"
-                       FontWeight="SemiBold"
-                       Foreground="#36768E"
-                       Text="{Binding PathToSourceDirectory}"/>
+                   Style="{StaticResource FolderIcon}"/>
+            <TextBlock Text="{Binding PathToSourceDirectory}"
+                       Style="{StaticResource PathToSourceDirectory}"/>
         </WrapPanel>
 
         <!-- Folder statistics -->

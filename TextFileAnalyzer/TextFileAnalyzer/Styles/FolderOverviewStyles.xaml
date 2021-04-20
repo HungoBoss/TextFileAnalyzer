@@ -17,6 +17,22 @@
         <Setter Property="FontFamily" Value="{StaticResource Roboto}"/>
     </Style>
 
+    <Style TargetType="TextBlock" x:Key="PathToSourceDirectory">
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="FontSize" Value="25"/>
+        <Setter Property="Margin" Value="0 10"/>
+        <Setter Property="FontFamily" Value="{StaticResource Roboto}"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="Foreground" Value="#36768E"/>
+    </Style>
+
+    <Style TargetType="Image" x:Key="FolderIcon">
+        <Setter Property="Width" Value="50"/>
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="Margin" Value="10"/>
+    </Style>
+
     <Style TargetType="Label" x:Key="FolderOverviewSmallerLabel" BasedOn="{StaticResource FolderOverviewLabels}">
         <Setter Property="FontSize" Value="16"/>
     </Style>
