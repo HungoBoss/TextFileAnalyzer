@@ -9,30 +9,6 @@
         WindowStartupLocation="CenterScreen"
         d:DataContext="{d:DesignInstance local:MainViewViewModel}">
     <Grid>
-        <Grid.Resources>
-            <Style x:Key="BaseButton" TargetType="Button">
-                <Setter Property="FontFamily" Value="Century Gothic" />
-                <Setter Property="Template">
-                    <Setter.Value>
-                        <ControlTemplate TargetType="Button">
-                            <Border Background="{TemplateBinding Background}" BorderThickness="1">
-                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                            </Border>
-                        </ControlTemplate>
-                    </Setter.Value>
-                </Setter>
-            </Style>
-
-            <Style x:Key="SelectButton" TargetType="Button" BasedOn="{StaticResource BaseButton}">
-                <Setter Property="Background" Value="#4d94cb"/>
-                <Style.Triggers>
-                    <Trigger Property="IsMouseOver" Value="True">
-                        <Setter Property="Background" Value="#36768E"/>
-                    </Trigger>
-                </Style.Triggers>
-            </Style>
-        </Grid.Resources>
-
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
             <RowDefinition Height="160"/>

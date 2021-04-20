@@ -76,6 +76,5 @@ namespace TextFileAnalyzer
             LongestSentence = modifiedText[0];
             ShortestSentence = modifiedText[modifiedText.Length - 1];
         }
-
     }
 }
