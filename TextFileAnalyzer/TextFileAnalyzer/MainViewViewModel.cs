@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Input;
 using TextFileAnalyzer.Annotations;
@@ -277,6 +278,24 @@ namespace TextFileAnalyzer
             _viewModel.FindShortestWord();
             _viewModel.FindLongestSentence();
             _viewModel.FindShortestSentence();
+        }
+
+        public event EventHandler CanExecuteChanged;
+    }
+
+    public class WindowCloseCommand : ICommand
+    {
+        public bool CanExecute(object parameter)
+        {
+            return true;
+        }
+
+        public void Execute(object parameter)
+        {
+            if (parameter is Window window)
+            {
+                window.Close();
+            }
         }
 
         public event EventHandler CanExecuteChanged;
