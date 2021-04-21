@@ -9,6 +9,7 @@ using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Input;
 using TextFileAnalyzer.Annotations;
+using Application = System.Windows.Application;
 
 namespace TextFileAnalyzer
 {
@@ -30,6 +31,49 @@ namespace TextFileAnalyzer
 
         #region Commands
         public SelectSourceDirectoryCommand SelectSourceDirectory => new SelectSourceDirectoryCommand(this);
+
+        public ICommand CloseWindowCommand
+        {
+            get { return new RelayCommand(e => true, MethodCloseWindow); }
+        }
+
+        public ICommand MaximizeWindowCommand
+        {
+            get { return new RelayCommand(e => true, MaximizeWindow); }
+        }
+
+        public ICommand MinimizeWindowCommand
+        {
+            get { return new RelayCommand(e => true, MinimizeWindow); }
+        }
+
+        private void MethodCloseWindow(object param)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void MaximizeWindow(object param)
+        {
+            if (Application.Current.MainWindow != null)
+            {
+                if (Application.Current.MainWindow.WindowState == WindowState.Maximized)
+                {
+                    Application.Current.MainWindow.WindowState = WindowState.Normal;
+                }
+                else
+                {
+                    Application.Current.MainWindow.WindowState = WindowState.Maximized;
+                }
+            }
+        }
+
+        private void MinimizeWindow(object param)
+        {
+            if (Application.Current.MainWindow != null)
+            {
+                Application.Current.MainWindow.WindowState = WindowState.Minimized;
+            }
+        }
         #endregion
 
         #region Setters and Getters
@@ -283,21 +327,31 @@ namespace TextFileAnalyzer
         public event EventHandler CanExecuteChanged;
     }
 
-    public class WindowCloseCommand : ICommand
+    public class RelayCommand : ICommand
     {
+        private readonly Predicate<object> _canExecute;
+        private readonly Action<object> _execute;
+
+        public RelayCommand(Predicate<object> canExecute, Action<object> execute)
+        {
+            this._canExecute = canExecute;
+            this._execute = execute;
+        }
+
+        public event EventHandler CanExecuteChanged
+        {
+            add => CommandManager.RequerySuggested += value;
+            remove => CommandManager.RequerySuggested -= value;
+        }
+
         public bool CanExecute(object parameter)
         {
-            return true;
+            return _canExecute(parameter);
         }
 
         public void Execute(object parameter)
         {
-            if (parameter is Window window)
-            {
-                window.Close();
-            }
+            _execute(parameter);
         }
-
-        public event EventHandler CanExecuteChanged;
     }
 }

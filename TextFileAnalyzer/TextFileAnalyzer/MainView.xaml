@@ -15,12 +15,38 @@
             <RowDefinition Height="160"/>
             <RowDefinition Height="120"/>
             <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
+
+        <WrapPanel Grid.Row="4" 
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2">
+            <Button
+                Width="100"
+                Height="80"
+                Margin="10"
+                Content="Close Window"
+                Command="{Binding CloseWindowCommand}"/>
+
+            <Button
+                Width="100"
+                Height="80"
+                Margin="10"
+                Content="Maximize Window"
+                Command="{Binding MaximizeWindowCommand}"/>
+
+            <Button
+                Width="100"
+                Height="80"
+                Margin="10"
+                Content="Minimize Window"
+                Command="{Binding MinimizeWindowCommand}"/>
+        </WrapPanel>
 
         <!-- Choose folder -->
         <Button Grid.Row="2"
