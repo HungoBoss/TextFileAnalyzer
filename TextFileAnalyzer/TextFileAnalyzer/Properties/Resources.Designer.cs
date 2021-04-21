@@ -61,11 +61,110 @@ namespace TextFileAnalyzer.Properties {
         }
         
         /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Largest file.
+        /// </summary>
+        public static string LongestFile {
+            get {
+                return ResourceManager.GetString("LongestFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Longest sentence.
+        /// </summary>
+        public static string LongestSentence {
+            get {
+                return ResourceManager.GetString("LongestSentence", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Longest word.
+        /// </summary>
+        public static string LongestWord {
+            get {
+                return ResourceManager.GetString("LongestWord", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Most occurred word.
+        /// </summary>
+        public static string MostOccurredWord {
+            get {
+                return ResourceManager.GetString("MostOccurredWord", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Vyhledá lokalizovaný řetězec podobný Select a folder.
         /// </summary>
         public static string SelectFolderButton {
             get {
                 return ResourceManager.GetString("SelectFolderButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Smallest file.
+        /// </summary>
+        public static string ShortestFile {
+            get {
+                return ResourceManager.GetString("ShortestFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Shortest sentence.
+        /// </summary>
+        public static string ShortestSentence {
+            get {
+                return ResourceManager.GetString("ShortestSentence", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Shortest word.
+        /// </summary>
+        public static string ShortestWord {
+            get {
+                return ResourceManager.GetString("ShortestWord", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Text File Analyzer.
+        /// </summary>
+        public static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Files.
+        /// </summary>
+        public static string TotalFilesCount {
+            get {
+                return ResourceManager.GetString("TotalFilesCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Sentences.
+        /// </summary>
+        public static string TotalSentencesCount {
+            get {
+                return ResourceManager.GetString("TotalSentencesCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledá lokalizovaný řetězec podobný Words.
+        /// </summary>
+        public static string TotalWordsCount {
+            get {
+                return ResourceManager.GetString("TotalWordsCount", resourceCulture);
             }
         }
     }

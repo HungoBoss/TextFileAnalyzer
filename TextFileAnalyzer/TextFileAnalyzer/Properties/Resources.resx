@@ -117,8 +117,52 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="LongestFile" xml:space="preserve">
+    <value>Largest file</value>
+    <comment>Largest file based on amount of characters in that particular file</comment>
+  </data>
+  <data name="LongestSentence" xml:space="preserve">
+    <value>Longest sentence</value>
+    <comment>Longest sentence in file</comment>
+  </data>
+  <data name="LongestWord" xml:space="preserve">
+    <value>Longest word</value>
+    <comment>Longest word in file</comment>
+  </data>
+  <data name="MostOccurredWord" xml:space="preserve">
+    <value>Most occurred word</value>
+    <comment>Most occurred word in text files</comment>
+  </data>
   <data name="SelectFolderButton" xml:space="preserve">
     <value>Select a folder</value>
     <comment>Button for selecting a folder with text files</comment>
+  </data>
+  <data name="ShortestFile" xml:space="preserve">
+    <value>Smallest file</value>
+    <comment>Smallest file based on amount of characters in that particular file</comment>
+  </data>
+  <data name="ShortestSentence" xml:space="preserve">
+    <value>Shortest sentence</value>
+    <comment>Shortest sentence in file</comment>
+  </data>
+  <data name="ShortestWord" xml:space="preserve">
+    <value>Shortest word</value>
+    <comment>Shortest word in file</comment>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Text File Analyzer</value>
+    <comment>Title of our application</comment>
+  </data>
+  <data name="TotalFilesCount" xml:space="preserve">
+    <value>Files</value>
+    <comment>Total amount of files in selected folder</comment>
+  </data>
+  <data name="TotalSentencesCount" xml:space="preserve">
+    <value>Sentences</value>
+    <comment>Total amount of sentences in text files</comment>
+  </data>
+  <data name="TotalWordsCount" xml:space="preserve">
+    <value>Words</value>
+    <comment>Total amount of words in text files</comment>
   </data>
 </root>

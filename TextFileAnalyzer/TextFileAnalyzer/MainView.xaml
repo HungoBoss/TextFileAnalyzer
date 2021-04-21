@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:TextFileAnalyzer"
         xmlns:p="clr-namespace:TextFileAnalyzer.Properties"
         mc:Ignorable="d"
-        Title="Text File Analyzer" Height="800" Width="1280"
+        Title="{x:Static p:Resources.Title}" Height="800" Width="1280"
         WindowStartupLocation="CenterScreen"
         d:DataContext="{d:DesignInstance local:MainViewViewModel}">
     <Grid>
@@ -64,7 +64,7 @@
             <Label Grid.Row="0"
                    Grid.Column="0"
                    Style="{StaticResource FolderOverviewLabels}"
-                   Content="Files "/>
+                   Content="{x:Static p:Resources.TotalFilesCount}"/>
             <TextBlock Grid.Row="1" 
                        Grid.Column="0"
                        Style="{StaticResource FolderOverviewTextBlocks}"
@@ -74,7 +74,7 @@
             <Label Grid.Row="0"
                    Grid.Column="1"
                    Style="{StaticResource FolderOverviewLabels}"
-                   Content="Total words"/>
+                   Content="{x:Static p:Resources.TotalWordsCount}"/>
             <TextBlock Grid.Row="1"
                        Grid.Column="1"
                        Style="{StaticResource FolderOverviewTextBlocks}"
@@ -84,7 +84,7 @@
             <Label Grid.Row="0"
                    Grid.Column="2"
                    Style="{StaticResource FolderOverviewLabels}"
-                   Content="Total sentences"/>
+                   Content="{x:Static p:Resources.TotalSentencesCount}"/>
             <TextBlock Grid.Row="1"
                        Grid.Column="2"
                        Style="{StaticResource FolderOverviewTextBlocks}"
@@ -94,7 +94,7 @@
             <Label Grid.Row="0"
                    Grid.Column="3"
                    Style="{StaticResource FolderOverviewSmallerLabel}"
-                   Content="Most occurred word"/>
+                   Content="{x:Static p:Resources.MostOccurredWord}"/>
             <TextBlock Grid.Row="1"
                        Grid.Column="3"
                        Style="{StaticResource FolderOverviewTextBlocks}"
@@ -104,7 +104,7 @@
             <Label Grid.Row="2"
                    Grid.Column="0"
                    Style="{StaticResource FolderOverviewSmallerLabel}"
-                   Content="Longest Word"/>
+                   Content="{x:Static p:Resources.LongestWord}"/>
             <TextBlock Grid.Row="3"
                        Grid.Column="0"
                        Style="{StaticResource FolderOverviewTextBlocks}"
@@ -114,7 +114,7 @@
             <Label Grid.Row="2"
                    Grid.Column="1"
                    Style="{StaticResource FolderOverviewSmallerLabel}"
-                   Content="Shortest Word"/>
+                   Content="{x:Static p:Resources.ShortestWord}"/>
             <TextBlock Grid.Row="3"
                        Grid.Column="1"
                        Style="{StaticResource FolderOverviewTextBlocks}"
@@ -124,7 +124,7 @@
             <Label Grid.Row="2"
                    Grid.Column="2"
                    Style="{StaticResource FolderOverviewSmallerLabel}"
-                   Content="Longest Sentence"/>
+                   Content="{x:Static p:Resources.LongestSentence}"/>
             <TextBlock Grid.Row="3"
                        Grid.Column="2"
                        Style="{StaticResource FolderOverviewSmallerText}"
@@ -134,7 +134,7 @@
             <Label Grid.Row="2"
                    Grid.Column="3"
                    Style="{StaticResource FolderOverviewSmallerLabel}"
-                   Content="Shortest Sentence"/>
+                   Content="{x:Static p:Resources.ShortestSentence}"/>
             <TextBlock Grid.Row="3"
                        Grid.Column="3"
                        Style="{StaticResource FolderOverviewSmallerText}"
@@ -144,7 +144,7 @@
             <Label Grid.Row="0"
                    Grid.Column="4"
                    Style="{StaticResource FolderOverviewSmallerLabel}"
-                   Content="Longest File"/>
+                   Content="{x:Static p:Resources.LongestFile}"/>
             <TextBlock Grid.Row="1"
                        Grid.Column="4"
                        Style="{StaticResource FolderOverviewTextBlocks}"
@@ -154,7 +154,7 @@
             <Label Grid.Row="2"
                    Grid.Column="4"
                    Style="{StaticResource FolderOverviewSmallerLabel}"
-                   Content="Shortest File"/>
+                   Content="{x:Static p:Resources.ShortestFile}"/>
             <TextBlock Grid.Row="3"
                        Grid.Column="4"
                        Style="{StaticResource FolderOverviewTextBlocks}"
@@ -203,7 +203,7 @@
                             <!-- Number of words -->
                             <Label Grid.Row="0"
                                    Grid.Column="2"
-                                   Content="Words"
+                                   Content="{x:Static p:Resources.TotalWordsCount}"
                                    Style="{StaticResource TextFileLabels}"/>
                             <TextBlock Grid.Row="1"
                                        Grid.Column="2"
@@ -214,7 +214,7 @@
                             <Label Grid.Row="0"
                                    Grid.Column="3"
                                    Style="{StaticResource TextFileLabels}"
-                                   Content="Sentences"/>
+                                   Content="{x:Static p:Resources.TotalSentencesCount}"/>
                             <TextBlock Grid.Row="1"
                                        Grid.Column="3"
                                        Style="{StaticResource TextBlockBiggerText}"
@@ -224,7 +224,7 @@
                             <Label Grid.Row="0"
                                    Grid.Column="4"
                                    Style="{StaticResource TextFileLabels}"
-                                   Content="Most occurred word"/>
+                                   Content="{x:Static p:Resources.MostOccurredWord}"/>
                             <TextBlock Grid.Row="1"
                                        Grid.Column="4"
                                        Style="{StaticResource TextFileTextBlocks}"
@@ -234,7 +234,7 @@
                             <Label Grid.Row="0"
                                    Grid.Column="5"
                                    Style="{StaticResource TextFileLabels}"
-                                   Content="Longest word"/>
+                                   Content="{x:Static p:Resources.LongestWord}"/>
                             <TextBlock Grid.Row="1"
                                        Grid.Column="5"
                                        Style="{StaticResource TextFileTextBlocks}"
@@ -244,7 +244,7 @@
                             <Label Grid.Row="0"
                                    Grid.Column="6"
                                    Style="{StaticResource TextFileLabels}"
-                                   Content="Shortest word"/>
+                                   Content="{x:Static p:Resources.ShortestWord}"/>
                             <TextBlock Grid.Row="1"
                                        Grid.Column="6"
                                        Style="{StaticResource TextFileTextBlocks}"
@@ -254,7 +254,7 @@
                             <Label Grid.Row="0"
                                    Grid.Column="7"
                                    Style="{StaticResource LabelsWithRestrictedWidth}"
-                                   Content="Longest sentence"/>
+                                   Content="{x:Static p:Resources.LongestSentence}"/>
                             <TextBlock Grid.Row="1"
                                        Grid.Column="7"
                                        Style="{StaticResource TextBlockWithRestrictedWidth}"
@@ -264,7 +264,7 @@
                             <Label Grid.Row="0"
                                    Grid.Column="8"
                                    Style="{StaticResource LabelsWithRestrictedWidth}"
-                                   Content="Shortest sentence"/>
+                                   Content="{x:Static p:Resources.ShortestSentence}"/>
                             <TextBlock Grid.Row="1"
                                        Grid.Column="8"
                                        Style="{StaticResource TextBlockWithRestrictedWidth}"
