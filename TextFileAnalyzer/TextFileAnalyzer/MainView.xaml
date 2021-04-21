@@ -6,15 +6,20 @@
         xmlns:local="clr-namespace:TextFileAnalyzer"
         xmlns:p="clr-namespace:TextFileAnalyzer.Properties"
         mc:Ignorable="d"
-        Title="{x:Static p:Resources.Title}" Height="800" Width="1280"
+        Title="{x:Static p:Resources.Title}" Height="900" Width="1280"
         WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        WindowState="Normal"
+        Margin="0"
+        Padding="0"
         d:DataContext="{d:DesignInstance local:MainViewViewModel}">
-    <Grid>
+    <Grid Margin="0">
         <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
             <RowDefinition Height="60"/>
             <RowDefinition Height="160"/>
             <RowDefinition Height="120"/>
-            <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
@@ -23,33 +28,42 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <WrapPanel Grid.Row="4" 
+        <WrapPanel Grid.Row="0" 
                    Grid.Column="0"
-                   Grid.ColumnSpan="2">
-            <Button
-                Width="100"
-                Height="80"
-                Margin="10"
-                Content="Close Window"
-                Command="{Binding CloseWindowCommand}"/>
+                   Grid.ColumnSpan="2"
+                   Height="20"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Right">
 
             <Button
-                Width="100"
-                Height="80"
-                Margin="10"
-                Content="Maximize Window"
+                Width="30"
+                Height="20"
+                Content="_"
+                Background="White"
+                BorderThickness="0"
+                Command="{Binding MinimizeWindowCommand}"/>
+
+            <Button
+                Width="30"
+                Height="20"
+                Content="□"
+                Background="White"
+                BorderThickness="0"
                 Command="{Binding MaximizeWindowCommand}"/>
 
+
             <Button
-                Width="100"
-                Height="80"
-                Margin="10"
-                Content="Minimize Window"
-                Command="{Binding MinimizeWindowCommand}"/>
+                Width="30"
+                Height="20"
+                Content="X"
+                Background="White"
+                BorderThickness="0"
+                Command="{Binding CloseWindowCommand}"/>
+
         </WrapPanel>
 
         <!-- Choose folder -->
-        <Button Grid.Row="2"
+        <Button Grid.Row="3"
                 Grid.Column="0"
                 Grid.ColumnSpan="2"
                 Content="{x:Static p:Resources.SelectFolderButton}"
@@ -58,7 +72,7 @@
         </Button>
 
         <!-- Folder destination -->
-        <WrapPanel Grid.Row="0" 
+        <WrapPanel Grid.Row="1" 
                    Grid.Column="0"
                    Grid.ColumnSpan="2">
             <Image Source="Images/folder.png"
@@ -68,7 +82,7 @@
         </WrapPanel>
 
         <!-- Folder statistics -->
-        <Grid Grid.Row="1"
+        <Grid Grid.Row="2"
               Grid.Column="0"
               Grid.ColumnSpan="2"
               Background="#4d94cb">
@@ -188,7 +202,7 @@
         </Grid>
 
         <!-- List of all text files -->
-        <ListView Grid.Row="3"
+        <ListView Grid.Row="4"
                   Grid.Column="0"
                   Grid.ColumnSpan="2"
                   Style="{StaticResource DefaultListView}"
