@@ -11,10 +11,8 @@
         WindowStyle="None"
         AllowsTransparency="True"
         WindowState="Normal"
-        Margin="0"
-        Padding="0"
         d:DataContext="{d:DesignInstance local:MainViewViewModel}">
-    <Grid Margin="0">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
             <RowDefinition Height="60"/>
@@ -28,39 +26,65 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <WrapPanel Grid.Row="0" 
-                   Grid.Column="0"
-                   Grid.ColumnSpan="2"
-                   Height="20"
-                   VerticalAlignment="Top"
-                   HorizontalAlignment="Right">
+        <Grid Grid.Row="0" 
+              Grid.Column="0"
+              Grid.ColumnSpan="2"
+              Background="#4D94CB">
 
-            <Button
-                Width="30"
-                Height="20"
-                Content="_"
-                Background="White"
-                BorderThickness="0"
-                Command="{Binding MinimizeWindowCommand}"/>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
 
-            <Button
-                Width="30"
-                Height="20"
-                Content="□"
-                Background="White"
-                BorderThickness="0"
-                Command="{Binding MaximizeWindowCommand}"/>
+            <WrapPanel Grid.Row="0" 
+                       Grid.Column="0"
+                       VerticalAlignment="Top"
+                       HorizontalAlignment="Left">
+                <Image Source="Images/textfileanalyzer.ico"
+                       Height="20"
+                       Width="20"
+                       Margin="0 0 10 0"/>
+
+                <TextBlock Text="{x:Static p:Resources.Title}"
+                           VerticalAlignment="Center"
+                           Foreground="White"/>
+            </WrapPanel>
+
+            <WrapPanel Grid.Row="0" 
+                       Grid.Column="2"
+                       HorizontalAlignment="Right">
+
+                <Button
+                    Width="30"
+                    Height="20"
+                    Content="−"
+                    Background="#4D94CB"
+                    Foreground="White"
+                    BorderThickness="0"
+                    Command="{Binding MinimizeWindowCommand}"/>
+
+                <Button
+                    Width="30"
+                    Height="20"
+                    Content="□"
+                    Background="#4D94CB"
+                    Foreground="White"
+                    BorderThickness="0"
+                    Command="{Binding MaximizeWindowCommand}"/>
 
 
-            <Button
-                Width="30"
-                Height="20"
-                Content="X"
-                Background="White"
-                BorderThickness="0"
-                Command="{Binding CloseWindowCommand}"/>
+                <Button
+                    Width="30"
+                    Height="20"
+                    Content="×"
+                    Background="#2E7CB8"
+                    Foreground="White"
+                    BorderThickness="0"
+                    Command="{Binding CloseWindowCommand}"/>
 
-        </WrapPanel>
+            </WrapPanel>
+        </Grid>
 
         <!-- Choose folder -->
         <Button Grid.Row="3"

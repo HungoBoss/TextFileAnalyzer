@@ -164,5 +164,8 @@
   <ItemGroup>
     <Resource Include="textfileanalyzer.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\textfileanalyzer.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
