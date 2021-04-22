@@ -52,4 +52,9 @@
     <Style TargetType="Label" x:Key="LabelsWithRestrictedWidth" BasedOn="{StaticResource TextFileLabels}">
         <Setter Property="Width" Value="180"/>
     </Style>
+
+    <Style TargetType="ScrollBar">
+        <Setter Property="Width" Value="10"/>
+        <Setter Property="Background" Value="Lime"/>
+    </Style>
 </ResourceDictionary>
