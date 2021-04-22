@@ -1,0 +1,1 @@
+You can either use a ToolTip XAML element at design time or a ToolTip C# object at runtime to create and attach a Tooltip to a control. In this article, we will learn how to use a Tooltip and its properties.

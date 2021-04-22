@@ -1,0 +1,1 @@
+A WPF ToolTip control shows some information or a hint about a control in a floating box when the mouse hovers over that control and it disappears when the mouse is moved away from that control. In WPF, the ToolTip property is attached with a ToolTip control.
