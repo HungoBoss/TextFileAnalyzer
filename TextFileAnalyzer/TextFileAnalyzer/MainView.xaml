@@ -56,31 +56,19 @@
                        HorizontalAlignment="Right">
 
                 <Button
-                    Width="30"
-                    Height="20"
                     Content="−"
-                    Background="#4D94CB"
-                    Foreground="White"
-                    BorderThickness="0"
+                    Style="{StaticResource ResizeButtons}"
                     Command="{Binding MinimizeWindowCommand}"/>
 
                 <Button
-                    Width="30"
-                    Height="20"
                     Content="□"
-                    Background="#4D94CB"
-                    Foreground="White"
-                    BorderThickness="0"
+                    Style="{StaticResource ResizeButtons}"
                     Command="{Binding MaximizeWindowCommand}"/>
 
 
                 <Button
-                    Width="30"
-                    Height="20"
                     Content="×"
-                    Background="#2E7CB8"
-                    Foreground="White"
-                    BorderThickness="0"
+                    Style="{StaticResource CloseButton}"
                     Command="{Binding CloseWindowCommand}"/>
 
             </WrapPanel>
