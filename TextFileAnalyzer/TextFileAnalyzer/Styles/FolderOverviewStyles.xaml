@@ -24,7 +24,7 @@
         <Setter Property="Margin" Value="0 10"/>
         <Setter Property="FontFamily" Value="{StaticResource Roboto}"/>
         <Setter Property="FontWeight" Value="SemiBold"/>
-        <Setter Property="Foreground" Value="#36768E"/>
+        <Setter Property="Foreground" Value="#2E7CB8"/>
     </Style>
 
     <Style TargetType="Image" x:Key="FolderIcon">
