@@ -1,4 +1,8 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    
+    <Color x:Key="DarkColor">#2E7CB8</Color>
+    <Color x:Key="LightColor">#4d94cb</Color>
+
+    <Color x:Key="FontColorDarkBackground">White</Color>
+    <Color x:Key="CloseButtonBackground">Red</Color>
 </ResourceDictionary>
